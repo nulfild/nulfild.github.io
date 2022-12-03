@@ -1,0 +1,26 @@
+.header
+    position: fixed
+    width: 100%
+    z-index: 100
+    // &__logo
+    //     position: absolute
+    //     width: 21rem
+    //     top: 3.3rem
+
+    @include respond(tab-port)
+        display: none
+    &__nav
+        display: flex
+        justify-content: center
+        align-content: center
+        padding-top: 30px
+    &__list
+        list-style: none
+
+    &__item
+        display: inline-block
+        margin: 0 3rem
+    &__link
+        &:link, &:visited
+            color: white
+            text-decoration: none

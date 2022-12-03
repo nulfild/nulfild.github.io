@@ -1,0 +1,22 @@
+*, ::after, ::before, ul
+   margin: 0
+   padding: 0
+   box-sizing: border-box
+
+html
+   font-size: 62.5%
+   @include respond(tab-land)
+      font-size: 56.25%
+   @include respond(tab-port)
+      font-size: 50%
+   @include respond(phone)
+      font-size: 40%
+   @include respond(big-screen)
+      font-size: 75%
+body
+   background-color: black
+   color: white
+.containerr
+   position: relative
+   // margin: 0 auto
+   // max-width: 150rem
