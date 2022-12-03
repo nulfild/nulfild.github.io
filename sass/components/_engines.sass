@@ -1,0 +1,55 @@
+.engines
+    position: relative
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    &__title
+        position: absolute
+        left: 7%
+        top: 50%
+        transform: translate(0, -50%)
+    &__h3
+        font-size: 2rem
+        margin-bottom: 1.2rem
+        @include respond(phone)
+            margin-bottom: .1rem
+
+    &__h2
+        font-size: 4.6rem
+        margin-bottom: 1.5rem
+        @include respond(phone)
+            margin-bottom: .3rem
+    &__p
+        width: 48rem
+        line-height: 1.6
+        font-size: 1.6rem
+        margin-bottom: 3rem
+        @include respond(tab-port)
+            width: 45%
+        @include respond(phone)
+            width: 55%
+            line-height: 1.2
+    &__table
+        border-color: grey
+        width: 90%
+        @include respond(tab-port)
+            width: 45%
+        @include respond(phone)
+            width: 50%
+    &__tbody
+        display: table-row-group
+        vertical-align: middle
+        border-color: inherit
+    &__tr
+        display: table-row
+        vertical-align: inherit
+        border-color: inherit
+        border-bottom: .1rem grey solid
+    &__td:first-child
+        font-size: 1.4rem
+        text-align: left
+    &__td
+        text-align: right
+        padding: 2rem 0
+        font-size: 1.6rem
