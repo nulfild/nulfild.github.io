@@ -376,7 +376,7 @@ body {
   display: inline-flex;
   justify-content: center;
   text-align: center;
-  gap: 13rem;
+  gap: 10rem;
   align-items: center;
 }
 @media (max-width: 1240px) {
@@ -444,38 +444,175 @@ body {
 
 .carousel-caption h5 {
   font-size: 2rem;
+  text-shadow: 0 0 2px #555;
 }
 
 .carousel-inner {
   position: relative;
 }
 
+.hamburger-menu {
+  display: none;
+}
+@media (max-width: 900px) {
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 23px;
+  right: 23px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: 0.25s;
+}
+
+.menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  text-align: center;
+  top: 0;
+  left: 200%;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  list-style: none;
+  background-color: black;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+  z-index: 999;
+}
+
+.menu__logo {
+  margin-top: 2.3rem;
+  margin-bottom: 5rem;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
 .header {
   position: fixed;
   width: 100%;
   z-index: 100;
+  top: -0.5rem;
+  left: 2rem;
 }
 @media (max-width: 900px) {
   .header {
-    display: none;
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+.header__logo {
+  font-size: 4.5rem;
+  z-index: 9999;
+}
+@media (max-width: 900px) {
+  .header__logo {
+    display: inline-block !important;
   }
 }
 .header__nav {
   display: flex;
-  justify-content: center;
   align-content: center;
   padding-top: 30px;
 }
 .header__list {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 .header__item {
   display: inline-block;
   margin: 0 3rem;
 }
+@media (max-width: 900px) {
+  .header__item {
+    margin: 0;
+  }
+}
+.header__item:first-child {
+  margin-right: 20rem;
+  margin-left: 8rem;
+}
+@media (max-width: 1100px) {
+  .header__item:first-child {
+    margin-right: 5rem;
+  }
+}
+@media (max-width: 900px) {
+  .header__item:first-child {
+    margin: 0;
+  }
+}
+.header__link {
+  text-transform: none;
+}
 .header__link:link, .header__link:visited {
   color: white;
   text-decoration: none;
+}
+@media (max-width: 900px) {
+  .header__link {
+    display: none;
+  }
 }
 
 .footer {
@@ -578,8 +715,10 @@ body {
   background-image: url(../img/fh/fh-engine.webp);
 }
 
-.fh-feature {
-  word-break: break-all;
+@media (max-width: 1100px) {
+  .fh-feature {
+    word-break: break-all;
+  }
 }
 @media (max-width: 900px) {
   .fh-feature {
@@ -590,4 +729,37 @@ body {
   .fh-feature {
     word-break: break-all;
   }
+}
+
+.welcome-dragon {
+  background-image: url(../img/dragon/dragon-welcome.webp);
+}
+
+.about-dragon {
+  background-image: url(../img/dragon/about-dragon.webp);
+}
+
+.about-draco {
+  background-image: url(../img/dragon/about-draco.webp);
+}
+
+.feature-dragon {
+  flex-direction: row-reverse;
+}
+@media (max-width: 900px) {
+  .feature-dragon {
+    flex-direction: column;
+  }
+}
+
+.welcome-f9 {
+  background-image: url(../img/f9/f9-welcome.webp);
+}
+
+.fh-about {
+  background-image: url(../img/f9/f9-about.webp);
+}
+
+.merlin-about {
+  background-image: url(../img/fh/fh-engine.webp);
 }/*# sourceMappingURL=style.css.map */

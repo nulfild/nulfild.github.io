@@ -6,6 +6,10 @@
    @if $breakpoint == tab-port
       @media (max-width: 900px)
          @content
+      
+   @if $breakpoint == text
+      @media (max-width: 1100px)
+         @content
 
    @if $breakpoint == tab-land
       @media (max-width: 1240px)

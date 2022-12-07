@@ -2,25 +2,46 @@
     position: fixed
     width: 100%
     z-index: 100
-    // &__logo
-    //     position: absolute
-    //     width: 21rem
-    //     top: 3.3rem
-
+    top: -.5rem
+    left: 2rem
     @include respond(tab-port)
-        display: none
+        width: auto
+        left: 50%
+        transform: translate(-50%, 0)
+    &__logo
+        font-size: 4.5rem
+        z-index: 9999
+        @include respond(tab-port)
+            display: inline-block !important
     &__nav
         display: flex
-        justify-content: center
+        // justify-content: center
         align-content: center
         padding-top: 30px
     &__list
         list-style: none
+        display: flex
+        align-items: center
 
     &__item
         display: inline-block
         margin: 0 3rem
+        @include respond(tab-port)
+            margin: 0
+        
+    &__item:first-child
+        margin-right: 20rem
+        margin-left: 8rem
+        @include respond(text)
+            margin-right: 5rem
+        @include respond(tab-port)
+            margin: 0
     &__link
+        text-transform: none
         &:link, &:visited
             color: white
             text-decoration: none
+        @include respond(tab-port)
+            display: none
+            
+                
