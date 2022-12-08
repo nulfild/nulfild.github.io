@@ -66,23 +66,25 @@
          <main>
             <section class="welcome welcome-f9">
                <div class="welcome__title">
-                  <h1>FALCON 9</h1>
-                  <h3>ПЕРВАЯ РАКЕТА ОРБИТАЛЬНОГО КЛАССА, СПОСОБНАЯ К ПОЛЕТУ</h3>
+                  <h1 class="animate">FALCON 9</h1>
+                  <h3 class="animate">
+                     ПЕРВАЯ РАКЕТА ОРБИТАЛЬНОГО КЛАССА, СПОСОБНАЯ К ПОЛЕТУ
+                  </h3>
                </div>
             </section>
 
             <section class="stats">
                <div class="stats__content">
                   <div class="stats__stat stat1">
-                     <span class="stats__number">186</span>
+                     <span class="stats__number animate_number">186</span>
                      <span class="stats__label">ЗАПУСКОВ</span>
                   </div>
                   <div class="stats__stat stat2">
-                     <span class="stats__number">144</span>
+                     <span class="stats__number animate_number">144</span>
                      <span class="stats__label">ПРИЗЕМЛЕНИЙ</span>
                   </div>
                   <div class="stats__stat stat3">
-                     <span class="stats__number">123</span>
+                     <span class="stats__number animate_number">123</span>
                      <span class="stats__label">ПЕРЕИСПОЛЬЗОВАНИЯ</span>
                   </div>
                </div>
@@ -103,9 +105,9 @@
 
             <section class="merlin-about engines">
                <div class="engines__title">
-                  <h3 class="engines__h3">ДВИГАТЕЛИ</h3>
-                  <h2 class="engines__h2">MERLIN</h2>
-                  <p class="engines__p">
+                  <h3 class="engines__h3 animate">ДВИГАТЕЛИ</h3>
+                  <h2 class="engines__h2 animate">MERLIN</h2>
+                  <p class="engines__p animate">
                      Merlin - семейство ракетных двигателей, разработанных
                      компанией SpaceX для использования на своих
                      ракетах-носителях Falcon 1, Falcon 9 и Falcon Heavy.
@@ -114,7 +116,7 @@
                      энергетическом цикле. Двигатель Merlin изначально был
                      разработан для восстановления и повторного использования.
                   </p>
-                  <table class="engines__table">
+                  <table class="engines__table animate">
                      <tbody class="engines__tbody">
                         <tr class="engines__tr">
                            <td class="engines__td">ДИАМЕТР</td>
@@ -131,7 +133,7 @@
                         <tr class="engines__tr">
                            <td class="engines__td">ТЯГА</td>
                            <td class="engines__td">
-                              230 tf <span>/ 500 klbf</span>
+                              230 тН <span>/ 500 клтН</span>
                            </td>
                         </tr>
                      </tbody>
@@ -139,18 +141,16 @@
                </div>
             </section>
 
-            
-
             <section>
                <div
-                  id="f9"
+                  id="falconHeavy"
                   class="carousel slide"
                   data-bs-ride="false"
                >
                   <div class="carousel-indicators">
                      <button
                         type="button"
-                        data-bs-target="#f9"
+                        data-bs-target="#falconHeavy"
                         data-bs-slide-to="0"
                         class="active"
                         aria-current="true"
@@ -158,13 +158,13 @@
                      ></button>
                      <button
                         type="button"
-                        data-bs-target="#f9"
+                        data-bs-target="#falconHeavy"
                         data-bs-slide-to="1"
                         aria-label="Slide 2"
                      ></button>
                      <button
                         type="button"
-                        data-bs-target="#f9"
+                        data-bs-target="#falconHeavy"
                         data-bs-slide-to="2"
                         aria-label="Slide 3"
                      ></button>
@@ -178,7 +178,8 @@
                         />
                         <div class="carousel-caption d-none d-md-block">
                            <h5>
-                              Первая и вторая ступени Falcon 9 после отделения в полете
+                              Первая и вторая ступени Falcon 9 после отделения в
+                              полете
                            </h5>
                            <p></p>
                         </div>
@@ -190,7 +191,9 @@
                            alt="..."
                         />
                         <div class="carousel-caption d-none d-md-block">
-                           <h5>Falcon 9 стартует с полезной нагрузкой Iridium-8</h5>
+                           <h5>
+                              Falcon 9 стартует с полезной нагрузкой Iridium-8
+                           </h5>
                            <p></p>
                         </div>
                      </div>
@@ -201,9 +204,7 @@
                            alt="..."
                         />
                         <div class="carousel-caption d-none d-md-block">
-                           <h5>
-                              Falcon 9 приземляется на мысе Канаверал
-                           </h5>
+                           <h5>Falcon 9 приземляется на мысе Канаверал</h5>
                            <p></p>
                         </div>
                      </div>
@@ -211,7 +212,7 @@
                   <button
                      class="carousel-control-prev"
                      type="button"
-                     data-bs-target="#f9"
+                     data-bs-target="#falconHeavy"
                      data-bs-slide="prev"
                   >
                      <span
@@ -223,7 +224,7 @@
                   <button
                      class="carousel-control-next"
                      type="button"
-                     data-bs-target="#f9"
+                     data-bs-target="#falconHeavy"
                      data-bs-slide="next"
                   >
                      <span
@@ -250,5 +251,6 @@
          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
          crossorigin="anonymous"
       ></script>
+      <script src="/js/app.js"></script>
    </body>
 </html>

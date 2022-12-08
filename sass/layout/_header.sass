@@ -2,15 +2,19 @@
     position: fixed
     width: 100%
     z-index: 100
-    top: -.5rem
-    left: 2rem
+    transition: all 0.3s ease
+    background-color: rgba(0, 0, 0, 0.8)
+    padding-bottom: 30px
     @include respond(tab-port)
         width: auto
         left: 50%
         transform: translate(-50%, 0)
+        background-color: unset
+        top: -0.5rem
     &__logo
         font-size: 4.5rem
         z-index: 9999
+        margin-left: 2rem
         @include respond(tab-port)
             display: inline-block !important
     &__nav
@@ -28,7 +32,7 @@
         margin: 0 3rem
         @include respond(tab-port)
             margin: 0
-        
+
     &__item:first-child
         margin-right: 20rem
         margin-left: 8rem
@@ -43,5 +47,8 @@
             text-decoration: none
         @include respond(tab-port)
             display: none
-            
-                
+
+.out
+    transform: translateY(-100%)
+    @include respond(tab-port)
+        transform: translate(-50%, -100%)

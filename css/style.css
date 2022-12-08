@@ -201,46 +201,66 @@ body {
 .welcome__title h3 {
   text-align: center;
   font-size: 2rem;
+  text-shadow: 0 0 2px #555;
 }
 
 .stats {
   text-align: center;
 }
 .stats__content {
-  width: 90%;
+  width: 100%;
   height: auto;
   margin: 3rem auto;
   margin-bottom: 15rem;
-  max-width: 96rem;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   text-align: center;
   position: relative;
+  gap: 14rem;
+}
+@media (max-width: 900px) {
+  .stats__content {
+    gap: 6rem;
+  }
+}
+@media (min-width: 1800px) {
+  .stats__content {
+    gap: 10rem;
+  }
 }
 .stats__stat {
   text-align: center;
-  width: 30%;
+  width: 20%;
   vertical-align: top;
-  margin: 0 1%;
   height: auto;
   display: inline-block;
-  padding: 0;
 }
 .stats__number {
   display: block;
   font-size: 14rem;
 }
+@media (max-width: 900px) {
+  .stats__number {
+    font-size: 8rem;
+  }
+}
 @media (max-width: 600px) {
   .stats__number {
-    font-size: 10rem;
+    font-size: 6rem;
   }
 }
 .stats__label {
   display: block;
   font-size: 2.2rem;
 }
+@media (max-width: 900px) {
+  .stats__label {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 600px) {
   .stats__label {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -357,6 +377,9 @@ body {
   text-align: right;
   padding: 2rem 0;
   font-size: 1.6rem;
+}
+.engines__td span {
+  color: grey;
 }
 
 .feature {
@@ -484,7 +507,8 @@ body {
   align-items: center;
   position: fixed;
   top: 23px;
-  right: 23px;
+  right: 24px;
+  transition: all 0.3s ease;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -530,7 +554,7 @@ body {
 }
 
 .menu__logo {
-  margin-top: 2.3rem;
+  margin-top: 1.8rem;
   margin-bottom: 5rem;
 }
 .menu__item {
@@ -546,23 +570,41 @@ body {
   background-color: #CFD8DC;
 }
 
+.out_btn {
+  transform: translateY(-300%);
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.animate.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}
+
 .header {
   position: fixed;
   width: 100%;
   z-index: 100;
-  top: -0.5rem;
-  left: 2rem;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-bottom: 30px;
 }
 @media (max-width: 900px) {
   .header {
     width: auto;
     left: 50%;
     transform: translate(-50%, 0);
+    background-color: unset;
+    top: -0.5rem;
   }
 }
 .header__logo {
   font-size: 4.5rem;
   z-index: 9999;
+  margin-left: 2rem;
 }
 @media (max-width: 900px) {
   .header__logo {
@@ -612,6 +654,15 @@ body {
 @media (max-width: 900px) {
   .header__link {
     display: none;
+  }
+}
+
+.out {
+  transform: translateY(-100%);
+}
+@media (max-width: 900px) {
+  .out {
+    transform: translate(-50%, -100%);
   }
 }
 
@@ -754,6 +805,9 @@ body {
 
 .welcome-f9 {
   background-image: url(../img/f9/f9-welcome.webp);
+}
+.welcome-f9 h1 {
+  white-space: nowrap;
 }
 
 .fh-about {

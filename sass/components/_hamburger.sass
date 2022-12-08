@@ -31,8 +31,8 @@
     align-items: center
     position: fixed
     top: 23px
-    right: 23px
-
+    right: 24px
+    transition: all 0.3s ease
     width: 26px
     height: 26px
 
@@ -83,7 +83,7 @@
 
     z-index: 999
 .menu__logo
-    margin-top: 2.3rem
+    margin-top: 1.8rem
     margin-bottom: 5rem
     @include respond(phone)
         // font-size: 30px
@@ -103,3 +103,6 @@
 
     &:hover
         background-color: #CFD8DC
+
+.out_btn
+    transform: translateY(-300%)
