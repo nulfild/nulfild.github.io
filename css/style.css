@@ -631,7 +631,7 @@ body {
   }
 }
 .header__item:first-child {
-  margin-right: 20rem;
+  margin-right: 10rem;
   margin-left: 8rem;
 }
 @media (max-width: 1100px) {
@@ -816,4 +816,61 @@ body {
 
 .merlin-about {
   background-image: url(../img/fh/fh-engine.webp);
+}
+
+.h1_history {
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 5rem;
+  margin-bottom: 5rem;
+}
+
+.h2_history {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.p_history {
+  display: inline-block;
+  width: 65%;
+  color: grey;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main_history {
+  position: relative;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .main_history img {
+    width: 30%;
+    position: relative;
+    display: inline-flex;
+    left: 0;
+    right: 0;
+  }
+}
+
+.cialk {
+  position: absolute;
+  width: 10%;
+  right: 5rem;
+}
+
+.sputnik {
+  position: absolute;
+  width: 12%;
+  left: 5rem;
+}
+
+.proton {
+  position: absolute;
+  width: 12%;
+  right: 5rem;
+}
+
+.text-align {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

@@ -37,8 +37,6 @@ for (let elm of elements) {
 const time = 10000;
 const step = 1;
 show = false;
-
-
 function onEntryNum(entry) {
    entry.forEach((change) => {
       if (change.isIntersecting) {
