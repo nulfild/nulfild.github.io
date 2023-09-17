@@ -631,7 +631,7 @@ body {
   }
 }
 .header__item:first-child {
-  margin-right: 10rem;
+  margin-right: -5rem;
   margin-left: 8rem;
 }
 @media (max-width: 1100px) {
