@@ -41,8 +41,8 @@ function onEntryNum(entry) {
    entry.forEach((change) => {
       if (change.isIntersecting) {
          if (!show) {
-            let num = change.target.innerHTML;
-            let n = num - 13;
+            let num = change.target.innerHTML - 50;
+            let n = num - 100;
             let t = Math.round(time / (100 / step));
             let interval = setInterval(() => {
                n = n + step;
